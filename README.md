@@ -42,8 +42,8 @@ HIRA automates medical data analysis to provide accurate diagnostics. Heatmap vi
 
 ## 🏆 Contributors
 - **Project Guide**: Prof. Dr. Rosna P. Haroon
-- **Development Team**: [Ajmal Shan P]
-                        [Mazin Muneer]
+- **Development Team**: Ajmal Shan P, 
+                        Mazin Muneer
 
 
 ## 📬 Contact
