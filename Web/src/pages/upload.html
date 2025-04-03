@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://ucarecdn.com/de7a0b45-22fa-4da6-a2c5-7703f8df5f09/image_20250130_012649855removebgpreview_upscaled.png" alt="Logo">
+            <h1>File Upload</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                <li><a href="result.html"><i class="fas fa-chart-line"></i> Results</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+    </header>
+    <main>
+        <form id="uploadForm">
+            <h2><i class="fas fa-upload"></i> Upload File</h2>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="fileType" value="Blood" required>
+                    Blood
+                </label>
+                <label>
+                    <input type="radio" name="fileType" value="Urine" required>
+                    Urine
+                </label>
+                <label>
+                    <input type="radio" name="fileType" value="X-Ray" required>
+                    X-Ray
+                </label>
+                <label>
+                    <input type="radio" name="fileType" value="MRI" required>
+                    MRI
+                </label>
+                <label>
+                    <input type="radio" name="fileType" value="CT-Scan" required>
+                    CT-Scan
+                </label>
+            </div>
+            <div class="file-upload-container">
+                <input type="file" id="fileInput" required>
+                <p class="file-hint">Supported formats: JPEG, PNG, DICOM, PDF</p>
+            </div>
+            <button type="submit"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 HIRA</p>
+    </footer>
+</body>
+</html>
