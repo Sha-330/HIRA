@@ -12,7 +12,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # Load model and labels from HIRA/models directory
-MODEL_DIR = r"C:\Users\mazin\Downloads\HIRA\models"
+MODEL_DIR = r"Path\to\the\models\folder"
 MRI_MODEL_PATH = os.path.join(MODEL_DIR, "stroke.h5")
 MRI_LABELS_PATH = os.path.join(MODEL_DIR, "stroke_labels.txt")
 CT_MODEL_PATH = os.path.join(MODEL_DIR, "ct.h5")
