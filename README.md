@@ -48,5 +48,5 @@ HIRA automates medical data analysis to provide accurate diagnostics. Heatmap vi
 
 ## 📬 Contact
 For inquiries, reach out at 
-[GitHub](https://github.com/maaazzinn).
-[GitHub](https://github.com/Sha-330).
+[Mazin](https://github.com/maaazzinn).
+[Ajmal](https://github.com/Sha-330).
