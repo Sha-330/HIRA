@@ -4,7 +4,7 @@ import numpy as np
 import os  
 
 # Set the correct path to the model  
-MODEL_DIR = r"C:\Users\mazin\Downloads\HIRA\models"  
+MODEL_DIR = r"path\to\the\model-folder"  
 XRAY_MODEL_PATH = os.path.join(MODEL_DIR, "xray.h5")  
 LABELS_PATH = os.path.join(MODEL_DIR, "xray.txt")  
 
