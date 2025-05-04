@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - HIRA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        <h1>Results</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('upload') }}">File Upload</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Uploaded File Result</h2>
+        {% if results %}
+            {% if file_type == 'Blood' %}
+                <div class="result-details">
+                    <h3>Blood Test Analysis</h3>
+                    <p>Patient Name: {{ results.get('Patient Name', 'N/A') }}</p>
+                    <p>Age: {{ results.get('Age', 'N/A') }}</p>
+                    <p>Gender: {{ results.get('Gender', 'N/A') }}</p>
+                </div>
+            {% else %}
+                <div class="result-details">
+                    <h3>{{ file_type }} Analysis</h3>
+                    <p>Classification: {{ results[0] }}</p>
+                    <p>Confidence Score: {{ results[1] * 100 }}%</p>
+                </div>
+            {% endif %}
+        {% else %}
+            <p id="result">No file uploaded or analysis failed.</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2025 HIRA</p>
+    </footer>
+</body>
+</html>

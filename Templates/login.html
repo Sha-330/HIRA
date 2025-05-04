@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIRA - Health Index & Result Analyzer</title>
+    <title>Login - HIRA</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <header>
         <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
-        <h1>HIRA</h1>
+        <h1>Login</h1>
         <nav>
             <ul>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="{{ url_for('upload') }}">File Upload</a></li>
                 <li><a href="{{ url_for('results') }}">Results</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="container">
-            <h2>Health Index & Result Analyzer</h2>
-            <p>HIRA (Health Index and Result Analyser) is a machine learning-driven health analytics platform designed to predict and analyze health conditions using patient data such as MRI, CT scans, X-rays, and blood tests.
-            The platform aims to improve diagnostic accuracy, reduce reliance on manual interpretations, and support clinicians with actionable insights.</p>
-        </div>
+        <form id="loginForm" method="POST" action="{{ url_for('login') }}">
+            <h2>Login</h2>
+            {% if error %}
+            <p class="error">{{ error }}</p>
+            {% endif %}
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
     </main>
     <footer>
         <p>&copy; 2025 HIRA</p>
